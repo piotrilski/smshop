@@ -9,11 +9,31 @@
  **********************************************************************************************/
 /** Map relative paths to URLs. */
 const map: any = {
+  '@angular2-material': 'vendor/@angular2-material'
 };
 
 /** User packages configuration. */
 const packages: any = {
 };
+
+// put the names of any of your Material components here
+const materialPkgs:string[] = [
+  'core',
+  'checkbox',
+  'button',
+  'input',
+  'toolbar',
+  'sidenav',
+  'progress-circle',
+];
+
+materialPkgs.forEach((pkg) => {
+  packages['@angular2-material/' + pkg] = {
+    format: 'cjs',
+    defaultExtension: 'js',
+    main: pkg + '.js'
+  }
+});
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
 /***********************************************************************************************
