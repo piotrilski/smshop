@@ -22,9 +22,11 @@ const materialPkgs:string[] = [
   'checkbox',
   'button',
   'input',
+  'icon',
+  'tabs',
   'toolbar',
   'sidenav',
-  'progress-circle',
+  'progress-circle'
 ];
 
 materialPkgs.forEach((pkg) => {

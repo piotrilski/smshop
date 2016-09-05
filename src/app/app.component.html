@@ -1,17 +1,15 @@
-<md-sidenav-layout>
+<md-sidenav-layout class="smshop">
 	<md-sidenav #sidenav mode="side">
 		Sajdnav!
 	</md-sidenav>
 	
-	<md-toolbar color="primary">
-		<button class="app-icon-button" 
+	<md-toolbar color="primary"
+				class="smshop__toolbar">
+		<button class="smshop__toolbar--menu-button"
 				(click)="sidenav.toggle()">
-			<i class="material-icons app-toolbar-menu">menu</i>
+			<i class="material-icons">menu</i>
 		</button>
 
-		Angular Material2 Example App
-
-		<span class="app-toolbar-filler"></span>
 	</md-toolbar>
 
 
