@@ -10,6 +10,8 @@ import { MdIconModule } from '@angular2-material/icon/icon';
 import { MdTabsModule } from '@angular2-material/tabs/tabs';
 import { MdToolbarModule } from '@angular2-material/toolbar/toolbar';
 
+import { UserModule } from './user/user.module';
+
 @NgModule({
     declarations: [ AppComponent ],
     imports:      [ 
@@ -21,7 +23,8 @@ import { MdToolbarModule } from '@angular2-material/toolbar/toolbar';
         MdButtonModule,
         MdIconModule,
         MdTabsModule,
-        MdToolbarModule
+        MdToolbarModule,
+        UserModule
     ],
     bootstrap:    [ AppComponent ],
 })

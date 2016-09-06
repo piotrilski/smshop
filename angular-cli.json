@@ -23,7 +23,7 @@
     }
   },
   "defaults": {
-    "prefix": "app",
+    "prefix": "smshop",
     "sourceDir": "src",
     "styleExt": "scss",
     "prefixInterfaces": false,
