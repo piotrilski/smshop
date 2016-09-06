@@ -1,8 +1,32 @@
 import { Injectable } from '@angular/core';
+import { Http, Response, Request, Headers } from '@angular/http';
+import { Observable } from 'rxjs/Rx';
+import { UserHotDealModel } from './user-hot-deal.model';
+
+// import 'rxks/add/operator/map';
+// import 'rxks/add/operator/catch';
 
 @Injectable()
 export class UserService {
+  private rootUrl: string = 'http://localhost:1986';  
 
-  constructor() { }
+  constructor(private http: Http) { }
 
+  getStartupDeals(startupDealsCount: number): Observable<UserHotDealModel[]> {
+    let url = this.rootUrl + '/hotdeals/' + startupDealsCount.toString(); 
+    
+    return this.http
+        .get(url)
+        .map((res: Response) => {
+            let data = res.json();
+            return new UserHotDealModel(
+                data.id, 
+                data.categoryId,
+                data.name,
+                data.description,
+                data.price);
+        })
+        .catch((ex: any) => Observable.throw(
+            ex.json() ? ex.json().error : 'Server error'));
+  }
 }
