@@ -3,8 +3,8 @@ import { Http, Response, Request, Headers } from '@angular/http';
 import { Observable } from 'rxjs/Rx';
 import { UserHotDealModel } from './user-hot-deal.model';
 
-// import 'rxks/add/operator/map';
-// import 'rxks/add/operator/catch';
+import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/catch';
 
 @Injectable()
 export class UserService {
