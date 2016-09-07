@@ -4,11 +4,6 @@ import { CommonModule  } from '@angular/common';
 // import { HttpModule } from '@angular/http';
 // import { FormsModule } from '@angular/forms';
 
-// import { MdButtonModule } from '@angular2-material/button/button';
-// import { MdIconModule } from '@angular2-material/icon/icon';
-// import { MdTabsModule } from '@angular2-material/tabs/tabs';
-// import { MdToolbarModule } from '@angular2-material/toolbar/toolbar';
-
 import { UserComponent } from './user.component';
 import { UserHotDealsComponent } from './user-hot-deals.component';
 import { UserLoginComponent } from './user-login.component';
