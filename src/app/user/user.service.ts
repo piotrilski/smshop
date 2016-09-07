@@ -17,15 +17,7 @@ export class UserService {
     
     return this.http
         .get(url)
-        .map((res: Response) => {
-            let data = res.json();
-            return new UserHotDealModel(
-                data.id, 
-                data.categoryId,
-                data.name,
-                data.description,
-                data.price);
-        })
+        .map((res: Response) => res.json())       
         .catch((ex: any) => Observable.throw(
             ex.json() ? ex.json().error : 'Server error'));
   }
