@@ -6,7 +6,8 @@ import { UserHotDealModel } from './user-hot-deal.model';
   moduleId: module.id,
   selector: 'smshop-user-hot-deals',
   templateUrl: 'user-hot-deals.component.html',
-  styleUrls: ['user-hot-deals.component.css']
+  styleUrls: ['user-hot-deals.component.css'],
+  providers: [ 'UserService' ]
 })
 export class UserHotDealsComponent implements OnInit {
 

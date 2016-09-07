@@ -14,6 +14,7 @@ const map: any = {
 
 /** User packages configuration. */
 const packages: any = {
+    
 };
 
 // put the names of any of your Material components here
@@ -28,6 +29,31 @@ const materialPkgs:string[] = [
   'sidenav',
   'progress-circle'
 ];
+
+const angularPackages:string[] = [
+  'core',
+  'common',
+  'compiler',
+  'forms',
+  'http',
+  'platform-browser',
+  'platform-browser-dynamic',
+  'router'
+];
+
+//angular bundles
+angularPackages.forEach((pkg) => {
+  packages['@angular/' + pkg] = {
+    main: "bundles/" + pkg + '.umd.js'
+  }
+});
+
+//angular testing bundles
+angularPackages.forEach((pkg) => {
+  packages['@angular/' + pkg + '/testing'] = {
+    main: "bundles/" + pkg + '-testing.umd.js'
+  }
+});
 
 materialPkgs.forEach((pkg) => {
   packages['@angular2-material/' + pkg] = {
